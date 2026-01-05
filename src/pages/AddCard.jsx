@@ -12,6 +12,8 @@ export default function AddCard({ columnId, setData }) {
   });
 
   function handleAdd() {
+    if (!form.position || !form.company) return;
+
     const id = nanoid();
 
     setData((prev) => ({
@@ -51,24 +53,63 @@ export default function AddCard({ columnId, setData }) {
 
   return (
     <div className="mt-3 space-y-2">
+      {/* Position */}
       <input
         className="w-full p-1 border rounded"
         placeholder="Position"
         value={form.position}
         onChange={(e) => setForm({ ...form, position: e.target.value })}
       />
+
+      {/* Company */}
       <input
         className="w-full p-1 border rounded"
         placeholder="Company"
         value={form.company}
         onChange={(e) => setForm({ ...form, company: e.target.value })}
       />
-      <button
-        onClick={handleAdd}
-        className="bg-blue-500 text-white px-2 py-1 rounded text-sm"
+
+      {/* Location */}
+      <input
+        className="w-full p-1 border rounded"
+        placeholder="Location (e.g. Berlin, Germany)"
+        value={form.location}
+        onChange={(e) => setForm({ ...form, location: e.target.value })}
+      />
+
+      {/* Work Mode */}
+      <select
+        className="w-full p-1 border rounded"
+        value={form.workMode}
+        onChange={(e) => setForm({ ...form, workMode: e.target.value })}
       >
-        Add
-      </button>
+        <option value="remote">Remote</option>
+        <option value="onsite">On-site</option>
+        <option value="hybrid">Hybrid</option>
+      </select>
+
+      {/* Salary Range */}
+      <input
+        className="w-full p-1 border rounded"
+        placeholder="Salary Range (e.g. $80k–$100k)"
+        value={form.salaryRange}
+        onChange={(e) => setForm({ ...form, salaryRange: e.target.value })}
+      />
+
+      <div className="flex gap-2">
+        <button
+          onClick={handleAdd}
+          className="bg-blue-500 text-white px-2 py-1 rounded text-sm"
+        >
+          Add
+        </button>
+        <button
+          onClick={() => setOpen(false)}
+          className="text-sm text-gray-500"
+        >
+          Cancel
+        </button>
+      </div>
     </div>
   );
 }
