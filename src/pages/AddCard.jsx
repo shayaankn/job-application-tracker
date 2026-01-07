@@ -45,17 +45,17 @@ export default function AddCard({ columnId, setData }) {
     return (
       <button
         onClick={() => setOpen(true)}
-        className="mt-3 text-sm text-gray-600 hover:text-black"
+        className="bg-gray-50 hover:bg-gray-100 text-gray-800 border border-gray-300 rounded-md cursor-pointer px-4 py-2 mt-4"
       >
         + Add card
       </button>
     );
 
   return (
-    <div className="mt-3 space-y-2">
+    <div className="space-y-2 mt-4">
       {/* Position */}
       <input
-        className="w-full p-1 border rounded"
+        className="text-sm text-gray-800 border border-gray-200 hover:border-gray-300 focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-200 rounded-md w-full p-2"
         placeholder="Position"
         value={form.position}
         onChange={(e) => setForm({ ...form, position: e.target.value })}
@@ -63,7 +63,7 @@ export default function AddCard({ columnId, setData }) {
 
       {/* Company */}
       <input
-        className="w-full p-1 border rounded"
+        className="text-sm text-gray-800 border border-gray-200 hover:border-gray-300 focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-200 rounded-md w-full p-2"
         placeholder="Company"
         value={form.company}
         onChange={(e) => setForm({ ...form, company: e.target.value })}
@@ -71,7 +71,7 @@ export default function AddCard({ columnId, setData }) {
 
       {/* Location */}
       <input
-        className="w-full p-1 border rounded"
+        className="text-sm text-gray-800 border border-gray-200 hover:border-gray-300 focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-200 rounded-md w-full p-2"
         placeholder="Location (e.g. Berlin, Germany)"
         value={form.location}
         onChange={(e) => setForm({ ...form, location: e.target.value })}
@@ -79,7 +79,7 @@ export default function AddCard({ columnId, setData }) {
 
       {/* Work Mode */}
       <select
-        className="w-full p-1 border rounded"
+        className="text-sm text-gray-800 border border-gray-200 hover:border-gray-300 focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-200 rounded-md w-full p-2"
         value={form.workMode}
         onChange={(e) => setForm({ ...form, workMode: e.target.value })}
       >
@@ -90,7 +90,7 @@ export default function AddCard({ columnId, setData }) {
 
       {/* Salary Range */}
       <input
-        className="w-full p-1 border rounded"
+        className="text-sm text-gray-800 border border-gray-200 hover:border-gray-300 focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-200 rounded-md w-full p-2"
         placeholder="Salary Range (e.g. $80k–$100k)"
         value={form.salaryRange}
         onChange={(e) => setForm({ ...form, salaryRange: e.target.value })}
@@ -99,13 +99,13 @@ export default function AddCard({ columnId, setData }) {
       <div className="flex gap-2">
         <button
           onClick={handleAdd}
-          className="bg-blue-500 text-white px-2 py-1 rounded text-sm"
+          className="text-sm bg-gray-950 hover:bg-gray-900 text-gray-50 rounded-md cursor-pointer px-4 py-2"
         >
           Add
         </button>
         <button
           onClick={() => setOpen(false)}
-          className="text-sm text-gray-500"
+          className="text-sm bg-gray-50 hover:bg-gray-100 text-gray-800 border border-gray-300 rounded-md cursor-pointer px-4 py-2"
         >
           Cancel
         </button>
