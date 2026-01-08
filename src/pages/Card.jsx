@@ -39,33 +39,40 @@ export default function Card({ card, columnId, setData }) {
     <div
       ref={setNodeRef}
       style={style}
-      className="bg-white rounded-md p-3 shadow flex items-center justify-between"
+      className="bg-gray-50 border border-gray-300 rounded-md p-3 flex items-center justify-between"
     >
       {/* Drag handle */}
       <div
         {...listeners}
         {...attributes}
-        className="cursor-grab flex-shrink-0 mr-3"
+        className="cursor-grab flex-shrink-0 mr-2"
       >
-        <i className="bi bi-grip-vertical text-gray-400 text-lg"></i>
+        <i className="bi bi-grip-vertical text-gray-400"></i>
       </div>
 
       {/* Card details */}
       <div className="flex-1">
-        <h3 className="font-semibold">{card.position}</h3>
-        <p className="text-sm text-gray-600">{card.company}</p>
-        <p className="text-xs text-gray-500">
+        <h3 className="font-semibold text-gray-800 mb-1">{card.position}</h3>
+        <p className="text-gray-600 text-sm mb-1">
+          <i class="bi bi-buildings-fill text-gray-400 text-xs mr-2"></i>
+          {card.company}
+        </p>
+        <p className="text-gray-600 text-sm mb-1">
+          <i class="bi bi-geo-alt-fill text-gray-400 text-xs mr-2"></i>
           {card.location} • {card.workMode}
         </p>
-        <p className="text-xs mt-1">{card.salaryRange}</p>
+        <p className="text-gray-600 text-sm">
+          <i class="bi bi-wallet-fill text-gray-400 text-xs mr-2"></i>
+          {card.salaryRange}
+        </p>
       </div>
 
       {/* Delete button */}
       <button
         onClick={handleDelete}
-        className="flex-shrink-0 text-red-500 hover:text-red-700 ml-3"
+        className="cursor-pointer flex-shrink-0 text-red-500 hover:text-red-700 ml-2"
       >
-        ✕
+        <i class="bi bi-x"></i>
       </button>
     </div>
   );
