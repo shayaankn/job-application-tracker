@@ -45,14 +45,14 @@ export default function AddCard({ columnId, setData }) {
     return (
       <button
         onClick={() => setOpen(true)}
-        className="bg-gray-50 hover:bg-gray-100 text-gray-800 border border-gray-300 rounded-md cursor-pointer px-4 py-2 mt-4"
+        className="bg-gray-50 hover:bg-gray-100 text-gray-800 border border-gray-300 rounded-md cursor-pointer px-4 py-2"
       >
         <i class="bi bi-plus"></i> Add card
       </button>
     );
 
   return (
-    <div className="space-y-2 mt-4">
+    <div className="space-y-2">
       {/* Position */}
       <input
         className="text-sm text-gray-800 border border-gray-200 hover:border-gray-300 focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-200 rounded-md w-full p-2"

@@ -15,7 +15,7 @@ export default function Column({ column, cards, setData }) {
       </h2>
 
       {/* <div className="flex-1 space-y-3"> */}
-      <div className="space-y-3">
+      <div>
         {cards.map((card) => (
           <Card
             key={card.id}

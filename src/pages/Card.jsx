@@ -39,7 +39,7 @@ export default function Card({ card, columnId, setData }) {
     <div
       ref={setNodeRef}
       style={style}
-      className="bg-gray-50 border border-gray-300 rounded-md p-3 flex items-center justify-between"
+      className="bg-gray-50 border border-gray-300 rounded-md p-3 mb-3 flex items-center justify-between"
     >
       {/* Drag handle */}
       <div
