@@ -6,7 +6,7 @@ export default function Trash({ visible = false }) {
   const baseClasses =
     "fixed bottom-16 left-1/2 transform -translate-x-1/2 transition-all";
   const visibleClass = visible
-    ? "opacity-100 pointer-events-auto"
+    ? "opacity-100 pointer-events-auto cursor-pointer"
     : "opacity-0 pointer-events-none";
 
   return (
