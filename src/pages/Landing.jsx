@@ -58,28 +58,34 @@ export default function Landing() {
         </div>
 
         <div className="grid gap-8 md:grid-cols-3 mt-12">
-          <div className="border border-stone-300 rounded-md p-6">
-            <i className="bi bi-columns-gap text-3xl"></i>
-            <h3 className="text-lg font-medium mt-2">Application board</h3>
-            <p className="text-sm text-stone-600 mt-2">
+          <div className="border border-stone-300 hover:bg-stone-950 hover:border-stone-950 rounded-md cursor-pointer transition-colors duration-200 group p-6">
+            <i className="bi bi-columns-gap text-3xl group-hover:text-stone-50"></i>
+            <h3 className="text-lg font-medium group-hover:text-stone-50 mt-2">
+              Application board
+            </h3>
+            <p className="text-sm text-stone-600 group-hover:text-stone-300 mt-2">
               Visualize all your applications by status — applied, interviewing,
               offer, or rejected.
             </p>
           </div>
 
-          <div className="border border-stone-300 rounded-md p-6">
-            <i className="bi bi-arrow-repeat text-3xl"></i>
-            <h3 className="text-lg font-medium mt-2">Update statuses</h3>
-            <p className="text-sm text-stone-600 mt-2">
+          <div className="border border-stone-300 hover:bg-stone-950 hover:border-stone-950 rounded-md cursor-pointer transition-colors duration-200 group p-6">
+            <i className="bi bi-arrow-repeat text-3xl group-hover:text-stone-50"></i>
+            <h3 className="text-lg font-medium group-hover:text-stone-50 mt-2">
+              Update statuses
+            </h3>
+            <p className="text-sm text-stone-600 group-hover:text-stone-300 mt-2">
               Mark applications as applied, interviewing, or offered — see your
               progress at a glance.
             </p>
           </div>
 
-          <div className="border border-stone-300 rounded-md p-6">
-            <i className="bi bi-bar-chart-line text-3xl"></i>
-            <h3 className="text-lg font-medium mt-2">Simple overview</h3>
-            <p className="text-sm text-stone-600 mt-2">
+          <div className="border border-stone-300 hover:bg-stone-950 hover:border-stone-950 rounded-md cursor-pointer transition-colors duration-200 group p-6">
+            <i className="bi bi-bar-chart-line text-3xl group-hover:text-stone-50"></i>
+            <h3 className="text-lg font-medium group-hover:text-stone-50 mt-2">
+              Simple overview
+            </h3>
+            <p className="text-sm text-stone-600 group-hover:text-stone-300 mt-2">
               See your entire job search progress at a glance with a clean,
               visual layout.
             </p>
@@ -104,7 +110,7 @@ export default function Landing() {
       </section>
 
       {/* CTA */}
-      <section className="bg-stone-900 text-stone-50">
+      <section className="bg-stone-950 text-stone-50">
         <div className="mx-auto max-w-4xl px-6 py-24 text-center">
           <h2 className="text-4xl font-bold tracking-tight">
             Ready to organize your job search?
@@ -116,7 +122,7 @@ export default function Landing() {
           <div className="mt-6">
             <Link
               to="/login"
-              className="text-stone-50 hover:text-stone-800 hover:bg-stone-100 border border-stone-100 rounded-md cursor-pointer focus:outline-none focus:ring-2 focus:ring-stone-700 transition-colors duration-100 px-8 py-3"
+              className="text-stone-50 hover:text-stone-800 hover:bg-stone-100 border border-stone-100 rounded-md cursor-pointer focus:outline-none focus:ring-2 focus:ring-stone-700 transition-colors duration-200 px-8 py-3"
             >
               Get Started
             </Link>
