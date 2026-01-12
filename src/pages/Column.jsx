@@ -12,6 +12,8 @@ export default function Column({ column, cards, setData }) {
     <div ref={setNodeRef} className="flex flex-col w-100">
       <h2 className="text-lg font-semibold text-stone-800 mb-4">
         {column.title}
+        {" "}
+        <span className="text-sm text-stone-600">({Array.isArray(cards) ? cards.length : 0})</span>
       </h2>
 
       {/* <div className="flex-1 space-y-3"> */}
