@@ -9,7 +9,7 @@ export default function Column({ column, cards, setData }) {
   });
 
   return (
-    <div ref={setNodeRef} className="flex flex-col w-100">
+    <div ref={setNodeRef} className="flex flex-col min-w-[200px] w-100">
       <h2 className="text-lg font-semibold text-stone-800 mb-4">
         {column.title}
         {" "}

@@ -88,7 +88,7 @@ export default function Board() {
         onDragEnd={handleDragEnd}
         onDragCancel={handleDragCancel}
       >
-        <div className="flex gap-4">
+        <div className="flex gap-4 overflow-x-auto">
           {Object.values(data.columns).map((column) => (
             <Column
               key={column.id}
