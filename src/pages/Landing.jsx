@@ -25,7 +25,7 @@ export default function Landing() {
 
             <div className="mt-6 flex gap-4">
               <Link
-                to="/login"
+                to="/board"
                 className="bg-stone-950 hover:bg-stone-900 text-stone-50 rounded-md cursor-pointer focus:outline-none focus:ring-2 focus:ring-stone-200 px-6 py-3"
               >
                 Get started
@@ -125,7 +125,7 @@ export default function Landing() {
 
           <div className="mt-6">
             <Link
-              to="/login"
+              to="/board"
               className="text-stone-50 hover:text-stone-800 hover:bg-stone-100 border border-stone-100 rounded-md cursor-pointer focus:outline-none focus:ring-2 focus:ring-stone-700 transition-colors duration-200 px-8 py-3"
             >
               Get Started
