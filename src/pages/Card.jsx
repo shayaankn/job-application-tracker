@@ -36,6 +36,36 @@ export default function Card({ card, columnId, setData }) {
     });
   }
 
+  function move(direction) {
+    setData((prev) => {
+      const columnsOrder = Array.isArray(prev.columnOrder)
+        ? prev.columnOrder
+        : Object.keys(prev.columns);
+      const idx = columnsOrder.indexOf(columnId);
+      if (idx === -1) return prev;
+      const targetIndex = direction === "left" ? idx - 1 : idx + 1;
+      if (targetIndex < 0 || targetIndex >= columnsOrder.length) return prev;
+      const targetColumnId = columnsOrder[targetIndex];
+      if (targetColumnId === columnId) return prev;
+
+      const newData = structuredClone(prev);
+      newData.columns[columnId].cardIds = newData.columns[
+        columnId
+      ].cardIds.filter((id) => id !== card.id);
+      newData.columns[targetColumnId].cardIds.push(card.id);
+      return newData;
+    });
+  }
+
+  function handleMoveLeft(e) {
+    e.stopPropagation();
+    move("left");
+  }
+  function handleMoveRight(e) {
+    e.stopPropagation();
+    move("right");
+  }
+
   return (
     <div
       ref={setNodeRef}
@@ -67,11 +97,33 @@ export default function Card({ card, columnId, setData }) {
         {card.salaryRange}
       </p>
 
-      {/* Drag Handle */}
+      {/* Left/right move buttons (small screens) */}
+      <div className="md:hidden absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-2">
+        <button
+          onClick={handleMoveLeft}
+          onPointerDown={(e) => e.stopPropagation()}
+          className="text-stone-500 hover:text-stone-700 cursor-pointer"
+          aria-label="Move left"
+          title="Move left"
+        >
+          <i className="bi bi-arrow-left"></i>
+        </button>
+        <button
+          onClick={handleMoveRight}
+          onPointerDown={(e) => e.stopPropagation()}
+          className="text-stone-500 hover:text-stone-700 cursor-pointer"
+          aria-label="Move right"
+          title="Move right"
+        >
+          <i className="bi bi-arrow-right"></i>
+        </button>
+      </div>
+
+      {/* Drag handle (md+ screens) */}
       <div
         {...listeners}
         {...attributes}
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 text-stone-500 hover:text-stone-700 cursor-grab active:cursor-grabbing"
+        className="hidden md:flex absolute bottom-0 left-1/2 -translate-x-1/2 text-stone-500 hover:text-stone-700 cursor-grab active:cursor-grabbing"
         role="button"
         aria-label="Drag handle"
         title="Drag"
