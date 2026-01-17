@@ -47,7 +47,7 @@ export default function AddCard({ columnId, setData }) {
         onClick={() => setOpen(true)}
         className="text-sm bg-stone-50 hover:bg-stone-100 text-stone-800 border border-stone-300 rounded-md cursor-pointer px-4 py-2"
       >
-        <i class="bi bi-plus"></i> Add card
+        <i className="bi bi-plus"></i> Add card
       </button>
     );
 
