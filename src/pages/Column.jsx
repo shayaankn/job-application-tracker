@@ -10,10 +10,20 @@ export default function Column({ column, cards, setData }) {
 
   return (
     <div ref={setNodeRef} className="flex flex-col min-w-[200px] w-100">
-      <h2 className="text-lg font-semibold text-slate-900 mb-4">
-        {column.title}{" "}
-        <span className="text-sm text-slate-600">
-          ({Array.isArray(cards) ? cards.length : 0})
+      <h2 className="text-lg font-semibold text-slate-900 flex items-center gap-2 mb-4">
+        <span className="whitespace-nowrap">{column.title}</span>
+
+        <span
+          className="
+            inline-flex items-center justify-center
+            min-w-[1.5rem] h-6
+            rounded-md
+            bg-purple-100 text-slate-600
+            border border-purple-200
+            text-xs font-medium
+          "
+        >
+          {Array.isArray(cards) ? cards.length : 0}
         </span>
       </h2>
 
