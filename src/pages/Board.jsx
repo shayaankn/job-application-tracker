@@ -37,11 +37,11 @@ export default function Board() {
   }
 
   return (
-    <section className="min-h-screen bg-stone-100 p-6">
-      <h1 className="text-2xl font-semibold text-stone-800 mb-1">
+    <section className="min-h-screen bg-white p-6">
+      <h1 className="text-2xl font-semibold text-slate-900 mb-1">
         Job Application Tracker
       </h1>
-      <p className="text-stone-600 text-sm mb-6">
+      <p className="text-slate-600 text-sm mb-6">
         All your job applications, organized in one place.
       </p>
       <DndContext onDragEnd={handleDragEnd}>

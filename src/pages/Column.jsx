@@ -10,9 +10,9 @@ export default function Column({ column, cards, setData }) {
 
   return (
     <div ref={setNodeRef} className="flex flex-col min-w-[200px] w-100">
-      <h2 className="text-lg font-semibold text-stone-800 mb-4">
+      <h2 className="text-lg font-semibold text-slate-900 mb-4">
         {column.title}{" "}
-        <span className="text-sm text-stone-600">
+        <span className="text-sm text-slate-600">
           ({Array.isArray(cards) ? cards.length : 0})
         </span>
       </h2>
