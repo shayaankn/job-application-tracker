@@ -78,7 +78,7 @@ export default function Card({ card, columnId, setData }) {
           onPointerDown={(e) => {
             e.stopPropagation();
           }}
-          className="absolute top-4 right-4 text-slate-600 hover:text-red-600 cursor-pointer p-2"
+          className="absolute bottom-10 right-4 text-slate-600 hover:text-red-600 cursor-pointer"
           aria-label="Delete card"
           title="Delete"
         >
