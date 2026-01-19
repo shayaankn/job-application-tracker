@@ -37,7 +37,7 @@ export default function Board() {
   }
 
   return (
-    <section className="min-h-screen bg-white p-6">
+    <section className="min-h-screen bg-purple-50 p-6">
       <h1 className="text-2xl font-semibold text-slate-900 mb-1">
         Job Application Tracker
       </h1>

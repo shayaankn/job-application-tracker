@@ -99,7 +99,7 @@ export default function AddCard({ columnId, setData }) {
       <div className="flex gap-2">
         <button
           onClick={handleAdd}
-          className="text-sm bg-purple-200 hover:bg-purple-300 text-slate-600 hover:text-slate-900 border border-purple-300 rounded-2xl cursor-pointer px-4 py-2"
+          className="text-sm bg-purple-200 hover:bg-purple-300 text-slate-900 border border-purple-300 rounded-2xl cursor-pointer px-4 py-2"
         >
           Add
         </button>
