@@ -1,10 +1,23 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 // import Navbar from "../components/Navbar";
 // import Footer from "../components/Footer";
 import screenshotFull from "../assets/screenshot-full.webp";
 import screenshotHalf from "../assets/screenshot-half.webp";
 
 export default function Landing() {
+  useEffect(() => {
+    const typed = new window.Typed("#typed", {
+      strings: ["without the chaos.", "in one place.", "the smart way."],
+      typeSpeed: 60,
+      backSpeed: 60,
+      backDelay: 1400,
+      loop: true,
+    });
+
+    return () => typed.destroy();
+  }, []);
+
   return (
     <main className="bg-white text-slate-900 w-full">
       {/* <Navbar /> */}
@@ -12,8 +25,8 @@ export default function Landing() {
       {/* HERO SECTION */}
       <section className="flex flex-col sm:items-center sm:text-center max-w-6xl mx-auto px-6 pt-18 pb-10">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-          Track your job applications <br className="hidden sm:block" /> without
-          the chaos
+          Track your job applications <br className="hidden sm:block" />{" "}
+          <span id="typed"></span>
         </h1>
 
         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mb-8">
@@ -30,7 +43,7 @@ export default function Landing() {
           </Link>
           <a
             href="#features"
-            className="text-slate-500 hover:text-slate-900 bg-white hover:bg-purple-200 border border-slate-200 hover:border-purple-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-200 cursor-pointer px-7 py-3"
+            className="text-slate-900 bg-white hover:bg-purple-200 border border-slate-200 hover:border-purple-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-200 cursor-pointer transition px-7 py-3"
           >
             Learn more
           </a>
@@ -55,7 +68,7 @@ export default function Landing() {
         className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto px-6 py-14"
       >
         {/* Card 1 */}
-        <div className="border border-slate-200 rounded-2xl transition hover:-translate-y-2 hover:shadow-xl p-6">
+        <div className="border border-slate-200 rounded-2xl cursor-pointer transition hover:-translate-y-2 hover:shadow-lg p-6">
           {/* Content */}
           <div className="flex flex-col">
             <div className="bg-purple-100 flex items-center justify-center h-14 w-14 rounded-xl text-2xl mb-4">
@@ -72,7 +85,7 @@ export default function Landing() {
         </div>
 
         {/* Card 2 */}
-        <div className="border border-slate-200 rounded-2xl transition hover:-translate-y-2 hover:shadow-xl p-6">
+        <div className="border border-slate-200 rounded-2xl cursor-pointer transition hover:-translate-y-2 hover:shadow-lg p-6">
           {/* Content */}
           <div className="flex flex-col">
             <div className="bg-purple-100 flex items-center justify-center h-14 w-14 rounded-xl text-2xl mb-4">
@@ -89,7 +102,7 @@ export default function Landing() {
         </div>
 
         {/* Card 3 */}
-        <div className="border border-slate-200 rounded-2xl transition hover:-translate-y-2 hover:shadow-xl p-6">
+        <div className="border border-slate-200 rounded-2xl cursor-pointer transition hover:-translate-y-2 hover:shadow-lg p-6">
           {/* Content */}
           <div className="flex flex-col">
             <div className="bg-purple-100 flex items-center justify-center h-14 w-14 rounded-xl text-2xl mb-4">
