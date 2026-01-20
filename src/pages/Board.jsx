@@ -39,7 +39,7 @@ export default function Board() {
   return (
     <section className="min-h-screen bg-purple-50 p-6">
       <h1 className="text-2xl font-semibold text-slate-900 mb-1">
-        Job Application Tracker
+        Job Application Organizer
       </h1>
       <p className="text-slate-600 text-sm mb-6">
         All your job applications, organized in one place.

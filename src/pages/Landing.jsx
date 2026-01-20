@@ -30,7 +30,7 @@ export default function Landing() {
         </h1>
 
         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mb-8">
-          A simple, focused job application tracker that helps you stay
+          A simple, focused job application organizer that helps you stay
           organized, follow up on time, and keep your job search stress-free.
         </p>
 
