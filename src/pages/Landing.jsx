@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import screenshotImg from "../assets/screenshot.webp";
+// import Navbar from "../components/Navbar";
+// import Footer from "../components/Footer";
+import screenshotFull from "../assets/screenshot-full.webp";
+import screenshotHalf from "../assets/screenshot-half.webp";
 
 export default function Landing() {
   return (
@@ -36,9 +37,15 @@ export default function Landing() {
         </div>
 
         <img
-          src={screenshotImg}
+          src={screenshotHalf}
           alt="Product preview"
-          className="w-full max-w-6xl rounded-2xl border border-slate-200"
+          className="w-full max-w-6xl rounded-2xl border border-slate-200 md:hidden"
+        />
+
+        <img
+          src={screenshotFull}
+          alt="Product preview"
+          className="w-full max-w-6xl rounded-2xl border border-slate-200 hidden md:block"
         />
       </section>
 
@@ -51,7 +58,7 @@ export default function Landing() {
         <div className="border border-slate-200 rounded-2xl transition hover:-translate-y-2 hover:shadow-xl p-6">
           {/* Content */}
           <div className="flex flex-col">
-            <div className="text-purple-400 bg-purple-100 flex items-center justify-center h-14 w-14 rounded-xl text-2xl mb-4">
+            <div className="bg-purple-100 flex items-center justify-center h-14 w-14 rounded-xl text-2xl mb-4">
               <i className="bi bi-grid-1x2-fill"></i>
             </div>
 
@@ -68,7 +75,7 @@ export default function Landing() {
         <div className="border border-slate-200 rounded-2xl transition hover:-translate-y-2 hover:shadow-xl p-6">
           {/* Content */}
           <div className="flex flex-col">
-            <div className="text-purple-500 bg-purple-100 flex items-center justify-center h-14 w-14 rounded-xl text-2xl mb-4">
+            <div className="bg-purple-100 flex items-center justify-center h-14 w-14 rounded-xl text-2xl mb-4">
               <i className="bi bi-clipboard-check-fill"></i>
             </div>
 
@@ -85,7 +92,7 @@ export default function Landing() {
         <div className="border border-slate-200 rounded-2xl transition hover:-translate-y-2 hover:shadow-xl p-6">
           {/* Content */}
           <div className="flex flex-col">
-            <div className="text-purple-500 bg-purple-100 flex items-center justify-center h-14 w-14 rounded-xl text-2xl mb-4">
+            <div className="bg-purple-100 flex items-center justify-center h-14 w-14 rounded-xl text-2xl mb-4">
               <i className="bi bi-bar-chart-fill"></i>
             </div>
 
@@ -101,21 +108,21 @@ export default function Landing() {
 
       {/* CTA */}
       <section className="bg-white px-1 pb-1 pt-10">
-        <div className="bg-purple-200 rounded-2xl">
+        <div className="bg-purple-100 rounded-2xl">
           <div className="mx-auto max-w-4xl px-6 py-20 sm:text-center">
             <h2 className="text-4xl font-bold tracking-tight">
               Ready to organize your job search?
             </h2>
-            <p className="text-slate-600 text-lg mt-3">
+            <p className="text-slate-600 text-lg mt-4">
               Try the demo and start tracking your applications in minutes.
             </p>
 
-            <div className="mt-7">
+            <div className="mt-8">
               <Link
                 to="/board"
-                className="text-slate-50 bg-slate-900 hover:bg-slate-800 rounded-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-slate-400 transition-colors duration-200 px-7 py-3"
+                className="text-slate-50 bg-slate-950 hover:bg-slate-900 rounded-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-slate-400 transition-colors duration-200 px-7 py-3"
               >
-                Get Started
+                Start Tracking <i class="bi bi-arrow-right ms-1"></i>
               </Link>
             </div>
           </div>
